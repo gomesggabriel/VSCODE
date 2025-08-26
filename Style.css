@@ -1,0 +1,90 @@
+/* Estilo básico */
+body {
+    font-family: Arial, sans-serif; /* fonte */
+    margin: 0;
+    font-size: 20px;
+    padding: 0;
+    background: #111111; /* cor de fundo */
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: rgb(0, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Novo tamanho da fonte do título do cabeçalho */
+header h1 {
+    margin: 0;
+    color: rgb(255, 165, 0); /* cor diferente */
+    font-size: 48px; /* novo tamanho de fonte */
+}
+
+/* Menu de navegação */
+header nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul.menu li {
+    margin: 0 15px;
+}
+
+header nav ul.menu li a {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul.menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 800px; /* define largura máxima */
+    margin: 0 auto;   /* centraliza horizontalmente */
+    text-align: center; /* centraliza o texto dentro da área */
+}
+
+article {
+    background: rgb(73, 68, 65);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+article p {
+    color: rgb(0, 255, 255);
+    line-height: 1.6; /* altura de linha */
+}
+
+/* Imagens dentro dos artigos */
+article .artigo-img {
+    width: 150px;         /* largura da imagem */
+    height: 150px;        /* altura da imagem */
+    border-radius: 50%;   /* deixa a imagem redonda */
+    display: block;
+    margin: 20px auto;    /* centraliza horizontalmente e dá espaço */
+}
+
+/* Títulos */
+h2 {
+    color: rgb(255, 215, 0); /* cor diferente do h1 */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: rgb(73, 68, 65);
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 20px;
+}
+  
