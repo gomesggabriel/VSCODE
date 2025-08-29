@@ -1,90 +1,235 @@
 /* Estilo básico */
 body {
-    font-family: Arial, sans-serif; /* fonte */
+    font-family: Arial, sans-serif;
     margin: 0;
     font-size: 20px;
     padding: 0;
-    background: #111111; /* cor de fundo */
+    background: #f7f2f2;
 }
 
 /* Cabeçalho */
 header {
-    background: #333;
-    color: rgb(0, 255, 255);
-    text-align: center;
-    padding: 20px;
+    background: #1570f8;
+    color: rgb(255, 255, 255);
+    padding: 20px; /* Mantém o padding para o cabeçalho */
+
+    /* Regras Flexbox para alinhar itens dentro do header */
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens (logo, h1, etc.) */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se não houver espaço */
 }
 
-/* Novo tamanho da fonte do título do cabeçalho */
+/* Estilo do título principal dentro do cabeçalho */
 header h1 {
-    margin: 0;
-    color: rgb(255, 165, 0); /* cor diferente */
-    font-size: 48px; /* novo tamanho de fonte */
+    font-size: 36px;
+    margin: 0; /* Remove margem padrão do h1 para melhor alinhamento */
+    text-align: center; /* Centraliza o texto do h1, se ele for o único item ou tiver espaço */
+    /* Se você tiver mais itens, como uma navegação, pode precisar de ajustes aqui */
 }
+
+/* Estilos específicos para a imagem da logo */
+/* Certifique-se de que sua logo está dentro de um elemento com a classe 'logo',
+   como <div class="logo"><img src="..."></div> no seu HTML. */
+header .logo img {
+    height: 100px; /* Ajuste o tamanho vertical da logo aqui */
+    width: auto;   /* Mantém a proporção da imagem */
+    /* Você pode usar max-height ou max-width também para responsividade */
+}
+
+/* Se você tiver outros elementos no cabeçalho (como navegação), eles viriam aqui */
+
 
 /* Menu de navegação */
 header nav ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* quebra em telas menores */
 }
 
 header nav ul.menu li {
-    margin: 0 15px;
+  margin: 5px 15px;
 }
 
 header nav ul.menu li a {
-    color: rgb(0, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul.menu li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  color: black;
 }
 
 /* Conteúdo principal */
 main {
-    padding: 20px;
-    max-width: 800px; /* define largura máxima */
-    margin: 0 auto;   /* centraliza horizontalmente */
-    text-align: center; /* centraliza o texto dentro da área */
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-article {
-    background: rgb(73, 68, 65);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+/* Área dos cards */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-article p {
-    color: rgb(0, 255, 255);
-    line-height: 1.6; /* altura de linha */
+/* Cada card */
+.cards article {
+  background: rgb(255, 255, 255); 
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  width: 300px;
+  flex: 1 1 300px;
+  text-align: center;
 }
 
-/* Imagens dentro dos artigos */
-article .artigo-img {
-    width: 150px;         /* largura da imagem */
-    height: 150px;        /* altura da imagem */
-    border-radius: 50%;   /* deixa a imagem redonda */
-    display: block;
-    margin: 20px auto;    /* centraliza horizontalmente e dá espaço */
+.cards article h2 {
+    color: #1570f8;
 }
 
-/* Títulos */
-h2 {
-    color: rgb(255, 215, 0); /* cor diferente do h1 */
+.cards article p {
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+}
+
+/* Imagens redondas */
+.artigo-img {
+     width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;   /* mantém a proporção da imagem */
+    object-position: center; /* centraliza o foco */
+}
+
+/* Formulário */
+.contato {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1570f8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 5px 0;
+  color: rgb(0, 0, 0);
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #222;
+  color: #fff;
+}
+
+/* Validação personalizada */
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid limegreen;
+}
+
+button {
+  background: #1570f8;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #a9e6e6;
 }
 
 /* Rodapé */
 footer {
-    text-align: center;
-    background: rgb(73, 68, 65);
-    color: #ffffff;
-    padding: 10px;
-    margin-top: 20px;
+  text-align: center;
+  background: #1570f8;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 20px;
 }
-  
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 28px;
+  }
+
+  .cards {
+      justify-content: center;
+  }
+
+  .cards article {
+      width: 90%; /* ocupa quase toda a largura */
+  }
+
+  .artigo-img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+  body {
+      font-size: 16px;
+  }
+
+  header h1 {
+      font-size: 22px;
+  }
+
+  header nav ul.menu {
+      flex-direction: column; /* menu em coluna */
+      align-items: center;
+  }
+
+  .cards article {
+      width: 100%;
+  }
+
+  .artigo-img {
+      width: 70px;
+      height: 70px;
+  }
+
+  form input, form textarea {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px;
+  }
+}

@@ -1,47 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Meu Blog Simples</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport">
 </head>
-<body>
+<body>  
 
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Dicas para ganhar Massa Muscular</h1>
-        <!-- Menu de navegação -->
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Treino</a></li>
-                <li><a href="#">Alimentação</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Cabeçalho -->
+<header>
+    <div class="logo">
+  <img src="jost.png" alt="Descrição da imagem">
+    </div>
+    <h1>Dicas para ganhar Massa Muscular</h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#Nutrição">Nutrição</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+    
 
     <!-- Área principal -->
     <main>
-        <article>
-            <h2>Treino e foco</h2>
-            <p>Foque no treino e nos seus resultados, vá na academia até seis vezes semanais, com um treino adaptado de acordo com suas necessidades.</p>
-            <p>Desde foco no emagrecimento, ganho de força ou resistência, mas nunca desista!</p>
-            <!-- Imagem redonda entre os parágrafos -->
-            <img src="melhor-exercicio-para-pernas.webp" alt="Treino" class="artigo-img">
-        </article>
+        <div class="cards">
+            <article>
+                <h2>Introdução</h2>
+                    <p>Estamos constantemente em busca de evolução pessoal, 
+                        seja pela saúde, estética ou bem-estar. Nesse caminho,
+                         o exercício físico é uma ferramenta essencial e deveria fazer parte da rotina de todas as pessoas.
+                         Não se trata apenas de musculação, mas sim de praticar algum tipo de atividade física, seja ela qual for.</p>
+                    <p>Nosso corpo precisa de estímulos regulares para funcionar de forma saudável e eficiente.
+                         A prática de exercícios melhora não só a aparência, mas também o humor, o sono, a disposição e a qualidade de vida como um todo.
+                         Adotar esse hábito é um investimento na nossa própria longevidade.</p>
+                    <p>Por isso, é fundamental encaixar a atividade física no dia a dia, mesmo que de forma simples.
+                         Uma caminhada, um treino funcional ou qualquer outro exercício já fazem diferença.
+                          O importante é manter o corpo em movimento.</p>
+                <img src="O-que-fazer-quando-voce-nao-gosta-de-ir-a-academia.jpg" alt="Pessoa treinando" class="artigo-img">
+            </article>
 
-        <article>
-            <h2>Alimentacao</h2>
-            <p>Evite alimentos industrializados como bolachas e enlatados, troque por ovos, carne vermelha e peixes.</p>
-            <p>Distribua sua alimentação durante o dia, evitando o excesso de carboidratos caso você não queira entrar em bulking.</p>
-            <!-- Imagem redonda entre os parágrafos -->
-            <img src="how-much-protein-is-too-much-in-bodybuilding_605d687abb2c9-768x512.jpeg" alt="Alimentação" class="artigo-img">
-        </article>
+            <article>
+                <h2>A importância dos exercícios</h2>
+                    <p>A musculação é vista como um dos melhores tipos de exercício que existem, porque trabalha vários músculos ao mesmo tempo.
+                        Ela pode focar em estética, força ou resistência, tudo depende do seu objetivo.
+                          Mas pra funcionar de verdade, tem que ser feita do jeito certo. </p>
+                    <p>Pra quem tá começando, o ideal é passar por um período de adaptação, que geralmente dura uns 3 meses.
+                         Nessa fase, o treino costuma ser dividido em ABC, ou seja: um dia empurra, outro dia puxa, e outro foca em pernas.
+                          Esse tipo de treino ajuda o corpo a se acostumar com os novos estímulos.</p>
+                    <p>Começar devagar é o melhor caminho. Com o tempo, dá pra aumentar a intensidade e os pesos.
+                         E mesmo sendo algo simples no começo, cada treino já traz resultado.
+                          O importante é manter a constância e ter paciência. Com dedicação, os resultados aparecem.</p>
+                <img src="melhor-exercicio-para-pernas.webp" alt="Prato de comida saudável" class="artigo-img">
+            </article>
+
+
+            <article>
+                <h2>Execução</h2>
+                <p>Na hora de treinar, o foco tem que ser no equilíbrio entre a execução certa e o peso usado.
+                     Não adianta querer levantar muito se o movimento tá errado. O ideal é adaptar o treino pra carga progressiva:
+                      vai aumentando o peso aos poucos e diminuindo as repetições.</p>
+                <p>É sempre bom ter a ajuda de um personal trainer, que pode ser pago à parte ou já incluso na academia.
+                     Mas também dá pra aprender bastante sozinho, observando outros alunos mais experientes e pesquisando.</p>
+                <p>O movimento em si geralmente é rápido na ida e mais controlado na volta.
+                     Isso ajuda a forçar as fibras musculares do jeito certo,
+                      causando microlesões que depois se recuperam — é esse processo que gera o ganho de massa.
+                       Treinar certo é tão importante quanto treinar forte.</p>
+                <img src="2025-06-01.webp" alt="Pessoa dormindo" class="artigo-img">
+            </article>
+
+
+            <article id="Nutrição">
+                <h2>Nutrição parte 1 </h2>
+                <p>Não adianta só treinar bem e esquecer do resto. Quem leva a academia a sério acaba adaptando toda a rotina:
+                     dorme melhor, bebe menos e começa a comer de forma mais consciente.
+                      A galera costuma dizer que o resultado vem 30% do treino, 30% do descanso e 40% da alimentação
+                       — sem contar a genética, que pode facilitar ou dificultar tudo. 
+                       Falando em genética, ela influencia bastante. Existem três biotipos principais:</p>
+                <p><strong>Ectomorfo</strong> - é o magro, que tem dificuldade pra ganhar massa. Precisa comer bem e focar em força. 
+                    <br><strong>Mesomorfo</strong> - aquele que ganha músculo com mais facilidade. Treino equilibrado e alimentação ajustada.
+                    <br><strong>Endomorfo</strong> - costuma ganhar gordura fácil. Precisa de mais cardio e dieta controlada.
+                    </p>
+                <img src="5-suplementos-populares-entre-quem-pratica-atividade-fisica.jpg" alt="Pessoa treinando" class="artigo-img">
+            </article>
+
+            <article>
+                <h2>Nutrição parte 2</h2>
+                <p>Se o foco é ganhar massa muscular, a alimentação tem que acompanhar.
+                     A proteína é o principal nutriente pra isso — carnes, ovos, frango e outros alimentos ajudam a construir os músculos.
+                      Já o carboidrato é a fonte de energia, e também tem seu papel, mas deve ser consumido com controle.</p>
+                <p>Antes do treino, o ideal é comer algo com carboidrato, até um docinho de vez em quando,
+                     tipo doce de leite, que tem rápida absorção e te dá energia.
+                      A proteína entra mais no pós-treino, pra ajudar na recuperação muscular.</p>
+                <p>E por falar em recuperação, ela também é parte do treino.
+                     É nesse momento que os nutrientes fazem efeito no corpo e o crescimento acontece.
+                      Não é preciso (nem recomendado) treinar todos os dias.
+                       Descansar também é treinar, e é isso que garante evolução.</p>
+                <img src="imagem-1.jpg" alt="Pessoa treinando" class="artigo-img">
+            </article>
+
+            <article>
+                <h2>Treino e foco</h2>
+                <p>Foco é tudo. Se você quer ver resultado, precisa levar o treino a sério.
+                     Pode treinar até seis vezes por semana, mas sempre com um plano bem montado e que se encaixe na sua rotina e objetivos.</p>
+                <p>Não adianta só ir pra academia por ir — tem que ter propósito, disciplina e paciência.
+                     Os resultados não aparecem do dia pra noite, mas quando aparecem, compensam todo o esforço.</p>
+                <p>E nunca esqueça: o descanso faz parte do processo. Seus músculos não crescem enquanto você tá treinando,
+                     e sim enquanto você tá descansando. Por isso, respeitar o tempo de recuperação é essencial.</p>
+                <p>Treine forte, coma bem, durma direito e mantenha o foco. O resto é consequência.</p>
+                
+                <img src="homem-musculoso-posando-de-moletom_600776-34694.jpg" alt="Pessoa treibnando" class="artigo-img">
+            </article>
+
+
+        </div>
+
+        <!-- Formulário de contato -->
+        <section class="contato" id="contato">
+            <h2>Entre em contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 - Todos os direitos reservados</p>
+        <p>&copy; 2025 TREMBO SUPLEMENTOS. Todos os direitos reservados.</p>
     </footer>
 
 </body>
