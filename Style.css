@@ -11,34 +11,26 @@ body {
 header {
     background: #1570f8;
     color: rgb(255, 255, 255);
-    padding: 20px; /* Mantém o padding para o cabeçalho */
+    padding: 20px; 
 
     /* Regras Flexbox para alinhar itens dentro do header */
     display: flex;
-    align-items: center; /* Alinha verticalmente os itens (logo, h1, etc.) */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    flex-wrap: wrap; /* Permite que os itens quebrem linha se não houver espaço */
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
 }
 
 /* Estilo do título principal dentro do cabeçalho */
 header h1 {
     font-size: 36px;
-    margin: 0; /* Remove margem padrão do h1 para melhor alinhamento */
-    text-align: center; /* Centraliza o texto do h1, se ele for o único item ou tiver espaço */
-    /* Se você tiver mais itens, como uma navegação, pode precisar de ajustes aqui */
+    margin: 0;
+    text-align: center;
 }
 
-/* Estilos específicos para a imagem da logo */
-/* Certifique-se de que sua logo está dentro de um elemento com a classe 'logo',
-   como <div class="logo"><img src="..."></div> no seu HTML. */
 header .logo img {
-    height: 100px; /* Ajuste o tamanho vertical da logo aqui */
-    width: auto;   /* Mantém a proporção da imagem */
-    /* Você pode usar max-height ou max-width também para responsividade */
+    height: 100px;
+    width: auto;   
 }
-
-/* Se você tiver outros elementos no cabeçalho (como navegação), eles viriam aqui */
-
 
 /* Menu de navegação */
 header nav ul.menu {
@@ -47,7 +39,7 @@ header nav ul.menu {
   margin: 10px 0 0 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* quebra em telas menores */
+  flex-wrap: wrap; 
 }
 
 header nav ul.menu li {
@@ -106,8 +98,8 @@ main {
      width: 250px;
     height: 250px;
     border-radius: 50%;
-    object-fit: cover;   /* mantém a proporção da imagem */
-    object-position: center; /* centraliza o foco */
+    object-fit: cover;   
+    object-position: center; 
 }
 
 /* Formulário */
@@ -176,9 +168,7 @@ footer {
   margin-top: 20px;
 }
 
-/* ============================= */
 /* RESPONSIVIDADE */
-/* ============================= */
 
 /* Tablets (até 768px) */
 @media (max-width: 768px) {
