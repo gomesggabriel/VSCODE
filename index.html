@@ -118,23 +118,113 @@
 
         </div>
 
-        <!-- Formulário de contato -->
-        <section class="contato" id="contato">
-            <h2>Entre em contato</h2>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+<!-- Galeria com imagem grande + miniaturas -->
+<section id="mini-galeria" style="text-align:center; margin:30px 0;">
+    <h2>Galeria</h2>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+    <!-- Imagem grande -->
+    <div style="margin-bottom:20px;">
+        <img id="foto-atual" src="p1.jpg" alt="Foto 1" 
+             style="max-width:600px; width:80%; height:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+    </div>
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+    <!-- Miniaturas -->
+    <div class="galeria-container" style="display:flex; justify-content:center; gap:15px;">
+        <img src="p1.jpg" data-indice="0" alt="Foto 1" 
+             style="width:100px; height:70px; object-fit:cover; cursor:pointer; border:2px solid #555; border-radius:4px;">
+        <img src="p2.jpg" data-indice="1" alt="Foto 2" 
+             style="width:100px; height:70px; object-fit:cover; cursor:pointer; border:2px solid transparent; border-radius:4px;">
+        <img src="p3.jpg" data-indice="2" alt="Foto 3" 
+             style="width:100px; height:70px; object-fit:cover; cursor:pointer; border:2px solid transparent; border-radius:4px;">
+    </div>
+</section>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+<script>
+const fotos = ["p1.jpg", "p2.jpg", "p3.jpg"];
+let indice = 0;
+const fotoAtual = document.getElementById("foto-atual");
+const galeriaContainer = document.querySelector(".galeria-container");
+
+// Destacar a primeira miniatura ao carregar a página
+const miniaturas = galeriaContainer.querySelectorAll("img");
+miniaturas.forEach((img, i) => {
+    if(i === 0) img.style.border = "2px solid #555";
+});
+
+// Delegação de eventos: clique em miniatura
+galeriaContainer.addEventListener("click", function(event) {
+    if(event.target.tagName === "IMG") {
+        indice = parseInt(event.target.dataset.indice);
+        fotoAtual.src = fotos[indice];
+        fotoAtual.alt = "Foto " + (indice + 1);
+
+        // Atualiza destaque da miniatura
+        miniaturas.forEach(img => img.style.border = "2px solid transparent");
+        event.target.style.border = "2px solid #555";
+    }
+});
+</script>
+
+
+
+
+               <!-- Formulário de contato -->
+               <section class="contato" id="contato">
+                <h2>Entre em contato</h2>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu email">
+    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+    
+                    <!-- Campo de senha adicionado -->
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                    <div id="erros-senha" style="color:red; font-size:14px; margin-top:5px;"></div>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+    
+    
+    
+        <!-- Script de validação -->
+        <script>
+            const senhaInput = document.getElementById("senha");
+            const errosDiv = document.getElementById("erros-senha");
+    
+            senhaInput.addEventListener("input", () => {
+                const senha = senhaInput.value;
+                let erros = [];
+    
+                if (senha.length < 5 || senha.length > 20) {
+                    erros.push("A senha deve ter entre 5 e 20 caracteres");
+                }
+                if (!/[A-Z]/.test(senha)) {
+                    erros.push("A senha deve conter pelo menos 1 letra maiúscula");
+                }
+                if (!/[0-9]/.test(senha)) {
+                    erros.push("A senha deve conter pelo menos 1 número");
+                }
+                if (!/[!@#$%^&*(),.?":{}|<>]/.test(senha)) {
+                    erros.push("A senha deve conter pelo menos 1 caractere especial");
+                }
+    
+                if (erros.length > 0) {
+                    errosDiv.innerHTML = erros.join("<br>");
+                } else {
+                    errosDiv.innerHTML = "<span style='color:green'>Senha válida ✅</span>";
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
 
     <!-- Rodapé -->
     <footer>
